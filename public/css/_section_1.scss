@@ -1,0 +1,92 @@
+@import './animations';
+@import './variables';
+
+#current-section {
+    animation: animation-current-section 0.6s ease-in-out 0.5s;
+    display: flex;
+    justify-content: space-around;
+    margin: 25px 0;
+    opacity: 0;
+    position: relative;
+
+    .current-data-div {
+        background-color: $opaque;
+        height: 350px;
+        padding: 10px;
+        position: relative;
+        width: 350px;
+
+        h1 {
+            font-size: 6rem;
+            // font-weight: 100;
+            margin: 10px 0 0;
+            position: relative;
+            right: 15px;
+            text-align: center;
+        }
+
+        h3 {
+            color: $primary;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h4 {
+            font-weight: 100;
+            margin: 10px 0 20px;
+            position: relative;
+            text-align: center;
+        }
+
+        img {
+            float: left;
+            margin-top: 30px;
+        }
+
+        span {
+            display: flex;
+            flex-direction: column;
+            height: fit-content;
+            margin: 10px;
+            position: absolute;
+            right: 0;
+            top: 75px;
+            width: fit-content;
+
+            button {
+                border: none;
+                background-color: transparent;
+                color: $primary;
+                font-size: 1.5rem;
+                outline: none;
+                transition: all 0.25s ease-in-out;
+
+                &:hover {
+                    border: 1px solid #FFFFFF;
+                }
+            }
+            .button-active {
+                background-color: rgba(255, 255, 255, 0.4);
+                font-size: 2rem;
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        ul {
+            display: flex;
+            font-size: 0.90rem;
+            font-weight: 100;
+            justify-content: space-around;
+            list-style: none;
+            padding: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    #current-section {
+        margin: auto;
+        width: fit-content;
+    }
+}

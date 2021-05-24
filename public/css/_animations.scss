@@ -1,0 +1,36 @@
+@keyframes animation-current-section {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes animation-bg {
+    0% {
+        background-position: 0px -20px;
+    }
+    100% {
+        background-position: 0px 0px;
+    }
+}
+
+@keyframes animation-slide-next {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-1150px);
+    }
+}
+@keyframes animation-slide-prev {
+    0% {
+        transform: translateX(-1150px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

@@ -1,0 +1,73 @@
+@import './section_1';
+@import './section_2';
+@import './section_3';
+
+body {
+    animation: animation-bg 1s ease-in-out;
+    // background-image: url('../images/bg/10.gif');
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: $primary;
+}
+
+.navbar {
+    background: transparent;
+    justify-content: center;
+
+    input {
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid $primary;
+        border-radius: 0;
+    }
+}
+
+img {
+    height: 75px;
+    width: auto;
+}
+
+footer {
+    text-align: center;
+
+    p {
+        font-size: 1.5rem;
+        color: $primary;
+    }
+
+    a {
+        color: $primary;
+        margin: 0 5px;
+        transition: all 0.25s ease-in-out;
+
+        &:hover {
+            color: $opaque;
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (max-width: 376px) {
+    body {
+        background-size: cover;
+    }
+
+    .navbar {
+        width: 100%;
+        position: relative;
+
+        form {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: auto;
+            width: fit-content;
+
+            button {
+                position: relative;
+                // right: -85px;
+            }
+        }
+    }
+}

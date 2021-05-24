@@ -1,0 +1,69 @@
+<!-- ICONS -->
+<% var icon0 = "images/icons/" + daily[0].weather[0].icon + ".png" %>
+<% var icon1 = "images/icons/" + daily[1].weather[0].icon + ".png" %>
+<% var icon2 = "images/icons/" + daily[2].weather[0].icon + ".png" %>
+<% var icon3 = "images/icons/" + daily[3].weather[0].icon + ".png" %>
+<% var icon4 = "images/icons/" + daily[4].weather[0].icon + ".png" %>
+<% var icon5 = "images/icons/" + daily[5].weather[0].icon + ".png" %>
+<% var icon6 = "images/icons/" + daily[6].weather[0].icon + ".png" %>
+
+<section id="daily-section">
+
+    <h2>Daily</h2>
+
+    <!-- ROW-DIV -->
+    <div class="row">
+
+      <div class="weekday">
+        <h5><%= weekday[0] %></h5>
+        <img src="<%= icon0 %>" alt="">
+        <h3 class="current-temp"><%= Math.ceil(daily[0].temp.max) %>° </h3><span class="current-temp"><%= Math.ceil(daily[0].temp.min) %>°</span>
+        <p><%= daily[0].weather[0].description %></p>
+      </div>
+
+      <div class="weekday">
+        <h5><%= weekday[1] %></h5>
+        <img src="<%= icon1 %>" alt="">
+        <h3 class="current-temp"><%= Math.ceil(daily[1].temp.max) %>° </h3><span class="current-temp"><%= Math.ceil(daily[1].temp.min) %>°</span>
+        <p><%= daily[1].weather[0].description %></p>
+      </div>
+
+      <div class="weekday">
+        <h5><%= weekday[2] %></h5>
+        <img src="<%= icon2 %>" alt="">
+        <h3 class="current-temp"><%= Math.ceil(daily[2].temp.max) %>° </h3><span class="current-temp"><%= Math.ceil(daily[2].temp.min) %>°</span>
+        <p><%= daily[2].weather[0].description %></p>
+      </div>
+
+      <div class="weekday">
+        <h5><%= weekday[3] %></h5>
+        <img src="<%= icon3 %>" alt="">
+        <h3 class="current-temp"><%= Math.ceil(daily[3].temp.max) %>° </h3><span class="current-temp"><%= Math.ceil(daily[3].temp.min) %>°</span>
+        <p><%= daily[3].weather[0].description %></p>
+      </div>
+
+      <div class="weekday">
+        <h5><%= weekday[4] %></h5>
+        <img src="<%= icon4 %>" alt="">
+        <h3 class="current-temp"><%= Math.ceil(daily[4].temp.max) %>° </h3><span class="current-temp"><%= Math.ceil(daily[4].temp.min) %>°</span>
+        <p><%= daily[4].weather[0].description %></p>
+      </div>
+
+      <div class="weekday">
+        <h5><%= weekday[5] %></h5>
+        <img src="<%= icon5 %>" alt="">
+        <h3 class="current-temp"><%= Math.ceil(daily[5].temp.max) %>° </h3><span class="current-temp"><%= Math.ceil(daily[5].temp.min) %>°</span>
+        <p><%= daily[5].weather[0].description %></p>
+      </div>
+
+      <div class="weekday">
+        <h5><%= weekday[6] %></h5>
+        <img src="<%= icon6 %>" alt="">
+        <h3 class="current-temp"><%= Math.ceil(daily[6].temp.max) %>° </h3><span class="current-temp"><%= Math.ceil(daily[6].temp.min) %>°</span>
+        <p><%= daily[6].weather[0].description %></p>
+      </div>
+
+    </div>
+
+
+  </section>

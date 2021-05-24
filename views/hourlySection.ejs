@@ -1,0 +1,49 @@
+
+<% let arrIcon = [] %>
+<% for(var i=0; i<24; ++i) { %>
+    <% arrIcon.push("images/icons/" + hourly[i].weather[0].icon + ".png") %>
+<% } %>
+
+<section id="hourly-section">
+
+    <h2>Hourly</h2>
+    <span><i id="hourly-toggle" class="fas fa-chevron-down"></i></span>
+    
+    <!-- TIME-BEFORE-NOON -->
+    <button class="prev1"><i class="fas fa-chevron-left"></i></button>
+    <div class="container-hourly1">
+
+        <% for(var i=0; i<12; ++i) { %>
+            <div class="hourly">
+                <img src="<%= arrIcon[i] %>" alt="">
+                <h2 class="current-temp"><%= Math.ceil(hourly[i].temp) %>°</h2>
+                <p><%= hourly[i].weather[0].description %></p>
+                <p><i class="fas fa-tint"></i> <%= hourly[i].humidity %>%<br><i class="fas fa-wind"></i>
+                <%= hourly[i].wind_speed %>km/h</p>
+                <h5><%= timeArray[i] %>:00</h5>
+            </div>
+        <% } %>
+
+    </div>
+    <button class="next1"><i class="fas fa-chevron-right"></i></button>
+
+
+    <!---------- TIME-AFTER-NOON ---------->
+    <button class="prev2"><i class="fas fa-chevron-left"></i></button>
+    <div class="container-hourly2">
+
+        <% for(var j=12; j<24; ++j) { %>
+            <div class="hourly">
+                <img src="<%= arrIcon[j] %>" alt="">
+                <h2 class="current-temp"><%= Math.ceil(hourly[j].temp) %>°</h2>
+                <p><%= hourly[j].weather[0].description %></p>
+                <p><i class="fas fa-tint"></i> <%= hourly[j].humidity %>%<br><i class="fas fa-wind"></i>
+                <%= hourly[j].wind_speed %>km/h</p>
+                <h5><%= timeArray[j] %>:00</h5>
+            </div>
+        <% } %>
+
+    </div>
+    <button class="next2"><i class="fas fa-chevron-right"></i></button>
+
+</section>

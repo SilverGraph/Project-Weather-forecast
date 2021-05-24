@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- FONT-AWESOME -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+
+</head>
+<!-- DYNAMIC-BACKGROUND -->
+<% var icon = currentData.weather[0].icon %>
+<% let bg = "background-image: url(../images/bg/" + icon + ".jpg)" %>
+
+<body style = "<%= bg %>" >
+
+  <nav class="navbar navbar-light">
+    <form action="/" class="form-inline" method="post">
+      <input id="autocomplete" name="cityName" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-light" type="submit">Search</button>
+    </form>
+  </nav>
+  
+  <!-- CURRENT-SECTION -->
+  <%- include("currentSection") -%>
+
+  <!-- DAILY-SECTION -->
+  <%- include("dailySection") -%>
+
+  <!-- HOURLY-SECTION -->
+  <%- include("hourlySection") -%>
+  
+  <footer>
+    <p>Coded by <a href="https://github.com/SilverGraph/Project-Weather-forecast" target="_blank"><i class="fab fa-github"></i> Raj Aryan</a></p>
+  </footer>
+
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/variables.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>

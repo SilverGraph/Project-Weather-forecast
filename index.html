@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insta Weather</title>
+  
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body style="background-image: url(images/default.jpg); display: flex; flex-direction: column;">
+
+  <nav class="navbar navbar-light">
+    <form action="/" class="form-inline" method="post">
+      <input id="autocomplete" name="cityName" class="form-control mr-sm-2" type="search" placeholder="Enter city name" aria-label="Search">
+      <button class="btn btn-outline-dark" type="submit">Search</button>
+    </form>
+  </nav>
+
+  <img style="width: 350px; height: auto; margin: 50px auto;" src="images/logo.png" alt="">
+
+  <h1 style="display: flex; justify-content: center; align-items: center;">INSTA WEATHER</h1>
+  
+  <footer>
+    <p>Coded by <i class="fab fa-github"></i><a href="https://github.com/SilverGraph/Project-Weather-forecast" target="_blank"> Raj Aryan</a></p>
+  </footer>
+
+  <script type="module" src="js/script.js"></script>
+  <script type="module" src="js/variables.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</body>
+</html>

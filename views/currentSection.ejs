@@ -1,0 +1,33 @@
+<section id="current-section">
+
+    <!-- CURRENT-DATA-DIV -->
+    <div class="current-data-div">
+
+      <h3> <%= city %> </h3>
+
+      <% var currentIcon = "images/icons/" +  currentData.weather[0].icon + ".png" %>
+      <img src="<%= currentIcon %>" alt="">
+      <h1 class="current-temp"><%= Math.ceil(currentData.temp) %>°</h1><span>
+
+      <button class="button-active" id="degreeC">C</button>
+      <button id="degreeF">F</button></span>
+
+      <h4><%= currentData.weather[0].description %></h4>
+      
+      <!-- CURRENT-CONDITION -->
+      <div class="current-condition">
+        <ul>
+          <li>Feels like: <%= Math.floor(currentData.feels_like) %>°</li>
+          <li>Wind speed: <%= currentData.wind_speed %> km/h</li>
+          <li>Visibility: <%= (currentData.visibility)/1000 %> km</li>
+        </ul>
+        <ul>
+          <li>Barometer: <%= ((currentData.pressure * 100)/101325).toFixed(2) %> atm</li>
+          <li>Humidity: <%= currentData.humidity %>%</li>
+          <li>Dew point: <%= Math.ceil(currentData.dew_point) %>°</li>
+        </ul>
+      </div>      
+
+    </div>
+
+  </section>
