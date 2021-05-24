@@ -28,7 +28,7 @@ app.post("/", (req, res) => {
   // console.log(cityName);
 
   // CODE TO GET THE LATITUDE AND LONGITUDE
-  const apiKey = "9e2c0125791837bcaad666d335935ce3";
+  const apiKey = "YOUR_API_KEY";
   const unit = "metric";
   const url = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey + "&units=" + unit;
 
