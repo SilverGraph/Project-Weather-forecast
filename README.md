@@ -2,7 +2,7 @@
 
 <p align="center">
   <img src="https://image.flaticon.com/icons/png/512/869/869869.png" width=150 height=150>
-  <a href="https://mighty-hamlet-06931.herokuapp.com/"><h2 align="center">INSTA WEATHER</h2></a>
+  <a href="https://mighty-hamlet-06931.herokuapp.com/" target="_blank"><h2 align="center">INSTA WEATHER</h2></a>
 </p>
   
 A single-page web application that uses <a href="https://openweathermap.org/">OpenWeather</a> API to fetch weather conditions in a JSON format when the user types the name of a city.
